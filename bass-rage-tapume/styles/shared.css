@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+:root {
+  --fa-primary-color: white;
+  --main-color: #9f2220;
+  --bg-color: #040305;
+}
+
+*::selection {
+  color: white;
+  background-color: var(--main-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--bg-color);
+}

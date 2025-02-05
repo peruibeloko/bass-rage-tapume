@@ -1,0 +1,96 @@
+main,
+header,
+footer {
+  position: relative;
+  margin: auto;
+  width: 40%;
+}
+
+header,
+footer {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+header h1,
+footer span {
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+}
+
+.home-button {
+  display: inline-block;
+  width: fit-content;
+  margin: 1rem 0;
+  border: 1px solid hsl(0, 0%, 40%);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: hsl(0, 0%, 40%);
+  transition-duration: 100ms;
+}
+
+.home-button:hover {
+  color: white;
+  border-color: white;
+}
+
+footer .home-button {
+  margin-top: 0;
+}
+
+footer span {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  display: block;
+  width: 100%;
+  border-top: 5px solid var(--main-color);
+}
+
+footer small a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+footer small {
+  margin-bottom: 3rem;
+  display: block;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+header {
+  padding-bottom: 1rem;
+  border-bottom: 5px solid var(--main-color);
+}
+
+p {
+  color: hsla(0, 0%, 80%);
+  margin: 2rem 0;
+  font-family: 'PT Serif', 'Times New Roman', Times, serif, serif;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+@media (max-width: 480px) {
+  main,
+  header,
+  footer {
+    width: 80%;
+  }
+
+  p {
+    font-size: larger;
+  }
+
+  img {
+    width: 100%;
+  }
+}

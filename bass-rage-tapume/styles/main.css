@@ -1,0 +1,135 @@
+ul {
+  list-style: none;
+}
+
+main {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  right: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.superscript {
+  font-size: 0.3em;
+  vertical-align: top;
+}
+
+.background-blur {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.background {
+  transform: translateX(-50%);
+  left: 25%;
+  height: 100%;
+  display: block;
+  position: fixed;
+}
+
+.message {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 6rem;
+  font-size: 7rem;
+}
+
+ul.socials {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+ul.socials a {
+  --icon-size: 3.5rem;
+  height: var(--icon-size);
+  width: var(--icon-size);
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+ul.socials a span {
+  filter: drop-shadow(0px 0px 1px black);
+}
+
+ul.socials a:hover span {
+  color: var(--main-color);
+}
+
+ul.socials span {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: calc(var(--icon-size) - 1.5rem);
+  transition-duration: 100ms;
+}
+
+.text-links {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.demo-link {
+  padding: 0.5rem;
+  margin-top: 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+
+  text-decoration: none;
+  color: white;
+  transition-duration: 100ms;
+}
+
+.demo-link:hover,
+.demo-link:hover i {
+  color: var(--main-color);
+}
+
+@media (max-width: 480px) {
+  main {
+    right: unset;
+    width: 100%;
+    justify-content: space-evenly;
+    top: unset;
+  }
+
+  .text-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demo-link {
+    transform: none;
+  }
+
+  ul.socials {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  ul.socials a {
+    --icon-size: 4.5rem;
+  }
+
+  .message {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .background {
+    left: 50%;
+  }
+}
